@@ -6,11 +6,13 @@ html, body {
 body {
   height: 100%;
   background: rgb(2,0,36);
-  background: linear-gradient(157deg, rgba(2,0,36,1) 0%, rgba(201,0,255,1) 0%, rgba(0,212,255,1) 100%);
+  background-image: url(../images/vaporwave.gif);
+  background-position: 80% 25%;
+  background-attachment: fixed;
   margin-bottom: 0;
 }
 
 .header-bg {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.658);
   border-radius: 10px;
 }

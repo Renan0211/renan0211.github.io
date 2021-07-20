@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable no-undef */
+/* eslint-disable */
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
 import renderWithRouter from './renderWithRouter';
@@ -8,7 +7,7 @@ import Home from '../Pages/Home';
 describe('tests the Home page header and navigation', () => {
   it('should render a header with my name on it', () => {
     const { getByText } = renderWithRouter(<Home />);
-    const mainTitle = getByText('Renan Antunes');
+    const mainTitle = getByText(/Renan Antunes/i);
     expect(mainTitle).toBeInTheDocument();
   });
   it('should have a link to the about page', () => {
