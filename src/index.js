@@ -10,7 +10,6 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    ,
   </React.StrictMode>,
   // eslint-disable-next-line comma-dangle, no-undef
   document.getElementById('root')
