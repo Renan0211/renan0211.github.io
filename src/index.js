@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  // eslint-disable-next-line react/jsx-filename-extension
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    ,
   </React.StrictMode>,
+  // eslint-disable-next-line comma-dangle, no-undef
   document.getElementById('root')
 );
 
