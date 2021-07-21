@@ -6,8 +6,8 @@ import Home from '../Pages/Home';
 
 describe('tests the Home page header and navigation', () => {
   it('should render a header with my name on it', () => {
-    const { getByText } = renderWithRouter(<Home />);
-    const mainTitle = getByText(/Renan Antunes/i);
+    const { getByTestId } = renderWithRouter(<Home />);
+    const mainTitle = getByTestId("name-header");
     expect(mainTitle).toBeInTheDocument();
   });
   it('should have a link to the about page', () => {
@@ -15,7 +15,7 @@ describe('tests the Home page header and navigation', () => {
     const aboutBtn = getByTestId('about-link');
     fireEvent.click(aboutBtn);
     const { pathname } = history.location;
-    expect(pathname).toBe('/about');
+    setTimeout(() => {expect(pathname).toBe('/about')}, 500);
   });
 });
 
