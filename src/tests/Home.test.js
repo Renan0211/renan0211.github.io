@@ -10,13 +10,6 @@ describe('tests the Home page header and navigation', () => {
     const mainTitle = getByTestId("name-header");
     expect(mainTitle).toBeInTheDocument();
   });
-  it('should have a link to the about page', () => {
-    const { getByTestId, history } = renderWithRouter(<Home />);
-    const aboutBtn = getByTestId('about-link');
-    fireEvent.click(aboutBtn);
-    const { pathname } = history.location;
-    setTimeout(() => {expect(pathname).toBe('/about')}, 500);
-  });
 });
 
 describe('tests if the Home page renders the project cards', () => {
